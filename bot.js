@@ -1,17 +1,14 @@
 const Discord = require('discord.js');
 const robot = new Discord.Client();
-const prefix = "!ft ";
+const prefix = "ft ";
 robot.login(process.env.BOT_TOKEN);
 robot.on('message', function(message) {
     if (message.author.equals(robot.user)) return;
     if (!message.content.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {
-        case "папич":
-            message.channel.sendMessage("Выруби этого дауна");
-            break;
-        case "команда":
-            message.channel.sendMessage("Собаки еб*ные");
+        case "test":
+            message.channel.sendMessage("Тест - УСПЕШНО");
             break;
         case "рандом":
             var roll = Math.floor(Math.random() * 100) + 1;
