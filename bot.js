@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const robot = new Discord.Client();
 const prefix = "!ft ";
-robot.login("NDA1NzU1Mzk4MzEwNzIzNTg0.DUpW8g.E0GP7_U7J3qxOFeo5DUmAPIKD2I");
+robot.login(process.env.BOT_TOKEN);
 robot.on('message', function(message) {
     if (message.author.equals(robot.user)) return;
     if (!message.content.startsWith(prefix)) return;
