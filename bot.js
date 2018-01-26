@@ -10,6 +10,10 @@ robot.on('message', function(message) {
         case "test":
             message.channel.sendMessage("Тест - УСПЕШНО");
             break;
+        case "game":
+            var avtor = new Discord.Message.content.author();
+            message.channel.sendMessage(avtor);
+            break;
         case "рандом":
             var roll = Math.floor(Math.random() * 100) + 1;
             message.channel.sendMessage("Ты зарандомил цифру " + roll);
