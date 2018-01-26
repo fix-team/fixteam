@@ -11,7 +11,7 @@ robot.on('message', function(message) {
             message.channel.sendMessage("Тест - УСПЕШНО");
             break;
         case "game":
-            var avtor = new Discord.Message.content.author.equals();
+            var avtor = new Discord.Message.author.equals();
             message.channel.sendMessage(avtor);
             break;
         case "рандом":
