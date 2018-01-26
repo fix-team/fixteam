@@ -10,6 +10,9 @@ robot.on('message', function(message) {
         case "test":
             message.channel.sendMessage("Тест - УСПЕШНО");
             break;
+        case "game":
+            message.channel.sendMessage(message.author.username);
+            break;
         case "random":
             var roll = Math.floor(Math.random() * 100) + 1;
             message.channel.sendMessage("Ты зарандомил цифру " + roll);
