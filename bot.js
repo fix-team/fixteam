@@ -4,11 +4,14 @@ const prefix = "ft ";
 robot.login(process.env.BOT_TOKEN);
 robot.on('message', function(message) {
     if (message.author.equals(robot.user)) return;
-    if ((!message.content.startsWith(prefix))&&(!message.content.startsWith(музон))) return;
+    if (!message.content.startsWith(prefix)&&(message.content == "музон")) return;
     var args = message.content.substring(prefix.length).split(" ");
+    if (message.content == "музон") {
+        message.channel.sendMessage(!play someday);
+    }
     switch (args[0].toLowerCase()) {
-        case "он":
-            message.channel.sendMessage("!play someday");
+        case "test":
+            message.channel.sendMessage("test");
             break;
         case "рандом":
             var roll = Math.floor(Math.random() * 100) + 1;
