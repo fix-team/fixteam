@@ -12,7 +12,7 @@ robot.on('message', function(message) {
             break;
         case "game":
             var avtor = message.author.username;
-            var i
+            var i;
             for (i = 0; i < 6; i++) {
                 switch (args[0].toLowerCase()) {
                     case "play":
