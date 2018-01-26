@@ -14,7 +14,7 @@ robot.on('message', function(message) {
             var avtor = new Discord.Message.author.equals();
             message.channel.sendMessage(avtor);
             break;
-        case "рандом":
+        case "random":
             var roll = Math.floor(Math.random() * 100) + 1;
             message.channel.sendMessage("Ты зарандомил цифру " + roll);
             break;
