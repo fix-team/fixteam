@@ -29,14 +29,5 @@ robot.on('message', function(message) {
     }
 });
 function game() {
-    var avtor = message.author.username;
-    var i
-    for (i = 0; i < 6; i++) {
-        switch (args[0].toLowerCase()) {
-            case "play":
-                if (message.author.username = avtor) {
-                    message.channel.sendMessage(message.author.username);
-                }
-                break;
-      }
+    message.channel.sendMessage(message.author.username);
   }
