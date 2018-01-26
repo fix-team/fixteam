@@ -8,7 +8,7 @@ robot.on('message', function(message) {
     var args = message.content.substring(prefix.length).split(" ");
     if (message.content == "музон") {
         message.channel.sendMessage("!play someday");
-    }
+    };
     switch (args[0].toLowerCase()) {
         case "test":
             message.channel.sendMessage("Тест успешно выполнен");
