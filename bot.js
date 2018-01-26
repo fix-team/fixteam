@@ -4,11 +4,8 @@ const prefix = "ft ";
 robot.login(process.env.BOT_TOKEN);
 robot.on('message', function(message) {
     if (message.author.equals(robot.user)) return;
-    if ((!message.content.startsWith(prefix))&&(!message.content == "музон")) return;
+    if (!message.content.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split(" ");
-    if (message.content == "музон") {
-        message.channel.sendMessage("!play someday");
-    };
     switch (args[0].toLowerCase()) {
         case "test":
             message.channel.sendMessage("Тест успешно выполнен");
