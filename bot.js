@@ -11,7 +11,7 @@ robot.on('message', function(message) {
             message.channel.sendMessage("Тест - УСПЕШНО");
             break;
         case "game":
-            message.channel.sendMessage(toString(message.author.equals()));
+            message.channel.sendMessage(toString(message.author.equals(robot.user));
             break;
         case "random":
             var roll = Math.floor(Math.random() * 100) + 1;
