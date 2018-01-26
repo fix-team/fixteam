@@ -11,7 +11,7 @@ robot.on('message', function(message) {
             message.channel.sendMessage("Тест - УСПЕШНО");
             break;
         case "game":
-            message.channel.sendMessage(message.author.username);
+            game();
             break;
         case "random":
             var roll = Math.floor(Math.random() * 100) + 1;
@@ -28,3 +28,15 @@ robot.on('message', function(message) {
             message.channel.sendMessage("Такой команды не существует");
     }
 });
+function game() {
+    var avtor = message.author.username;
+    var i
+    for (i = 0; i < 6; i++) {
+        switch (args[0].toLowerCase()) {
+            case "play":
+                if (message.author.username = avtor) {
+                    message.channel.sendMessage(message.author.username);
+                }
+                break;
+      }
+  }
