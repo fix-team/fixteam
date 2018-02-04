@@ -12,7 +12,10 @@ robot.on('message', function(message) {
                 
             break;
         case "clear":
-            message.delete(9999999999);
+            message.channel.fetchMessages()
+            .then(function(list){
+            message.channel.bulkDelete(list);
+            });    
             break;
         case "random":
             var roll = Math.floor(Math.random() * 100) + 1;
