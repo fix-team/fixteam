@@ -12,7 +12,8 @@ robot.on('message', function(message) {
                 
             break;
         case "clear":
-            message.channel.bulkDelete(message.channel.fetchMessages());
+            message.channel.bulkDelete();
+            message.delete(1000);
             break;
         case "random":
             var roll = Math.floor(Math.random() * 100) + 1;
