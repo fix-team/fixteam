@@ -7,10 +7,14 @@ robot.on('message', function(message) {
     if (!message.content.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {
-        case "test":
-            message.channel.sendMessage("Тест успешно выполнен");
+        case "game":
+            message.channel.sendMessage("Я загадал число от 1 до 5. Попробуй отгадать");
+                
             break;
-        case "рандом":
+        case "clear":
+            message.delete(1000);
+            break;
+        case "random":
             var roll = Math.floor(Math.random() * 100) + 1;
             message.channel.sendMessage("Ты зарандомил цифру " + roll);
             break;
