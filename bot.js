@@ -8,7 +8,7 @@ robot.on('message', function(message) {
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {
         case "game":
-            message.channel.sendMessage("Я загадал число от 1 до 5. Попробуй отгадать");
+            message.channel.sendMessage("!play 2");
                 
             break;
         case "clear":
