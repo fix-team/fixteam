@@ -8,8 +8,12 @@ robot.on('message', function(message) {
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {
         case "game":
-            message.channel.sendMessage("!play 2");
-                
+            message.channel.sendMessage("AZA");
+            message.member.voiceChannel.join()
+        .then(connection => { // Connection is an instance of VoiceConnection
+          message.reply('I have successfully connected to the channel!');
+        })
+        .catch(console.log);    
             break;
         case "clear":
             message.channel.fetchMessages()
