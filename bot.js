@@ -22,13 +22,16 @@ robot.on('message', function(message) {
     if (!message.content.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {
-        case "game":
-            message.channel.sendMessage("AZA");
-            message.member.voiceChannel.join()
-        .then(connection => { // Connection is an instance of VoiceConnection
-          message.reply('I have successfully connected to the channel!');
-        })
-        .catch(console.log);    
+        case "igor":
+              
+        var roll = Math.floor(Math.random() * 100) + 1;
+            
+        if (roll >= 0 && roll <= 25) {
+  message.channel.sendMessage("Игорь тест хайпит " + roll);
+} else {
+   message.channel.sendMessage("Игорь тест НЕ хайпит " + roll);
+}
+        
             break;
         case "clear":
             message.channel.fetchMessages()
