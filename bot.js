@@ -33,8 +33,7 @@ if (roll >= 0 && roll <= 25) {
 } else if (roll >= 50 && roll <= 75) {
   message.channel.sendMessage("Игорь пикнет TUSK");
 } else {
-  message.channel.sendMessage("Игорь пикнет GRIMSTROKE");  
-  message.channel.send("My Bot's message", {files: ["https://s0.rbk.ru/v6_top_pics/resized/1180xH/media/img/7/76/755173146462767.jpg"]});
+  message.channel.send("Игорь пикнет GRIMSTROKE", {files: ["https://s0.rbk.ru/v6_top_pics/resized/1180xH/media/img/7/76/755173146462767.jpg"]});
 }
             break;
         case "clear":
