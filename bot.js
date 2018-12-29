@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const robot = new Discord.Client();
-const prefix = "ft ";
+const prefix = "";
 robot.login(process.env.BOT_TOKEN);
 robot.on('message', message => {
   if (message.content === '/join') {
