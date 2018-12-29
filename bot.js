@@ -46,6 +46,8 @@ if (roll >= 0 && roll <= 25) {
             var roll = Math.floor(Math.random() * 100) + 1;
             message.channel.sendMessage("Ты зарандомил цифру " + roll);
             break;
+      case "вова":
+        message.channel.send("ПАШЁЛ НАХУЙ", {files: ["https://pp.userapi.com/c849528/v849528141/38918/QHCOJfVfT5g.jpg"]});
         case "info":
             var embed = new Discord.RichEmbed()
                 .setDescription("BOT by fixteam")
