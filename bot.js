@@ -48,6 +48,7 @@ if (roll >= 0 && roll <= 25) {
             break;
       case "вова":
         message.channel.send("ПАШЁЛ НАХУЙ", {files: ["https://pp.userapi.com/c849528/v849528141/38918/QHCOJfVfT5g.jpg"]});
+         break;
         case "info":
             var embed = new Discord.RichEmbed()
                 .setDescription("BOT by fixteam")
