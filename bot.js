@@ -26,13 +26,13 @@ robot.on('message', function(message) {
               
         var roll = Math.floor(Math.random() * 100) + 1;
             
-        if (roll >= 0 && roll <= 25) {
+if (roll >= 0 && roll <= 25) {
   message.channel.sendMessage("Игорь пикнет CHAOS KNIGHT);
 } else if (roll >= 25 && roll <= 50) {
   message.channel.sendMessage("Игорь пикнет UNDYING);
 } else if (roll >= 50 && roll <= 75) {
   message.channel.sendMessage("Игорь пикнет TUSK);
-} else if (roll >= 75 && roll <= 100) {
+} else {
   message.channel.sendMessage("Игорь пикнет GRIMSTROKE);   
 }
             break;
