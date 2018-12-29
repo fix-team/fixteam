@@ -56,7 +56,7 @@ if (roll >= 0 && roll <= 25) {
                 .setColor(0x00FFFF);
                 message.channel.sendEmbed(embed);
             break;
-        default:
-            message.channel.sendMessage("Такой команды не существует");
+        //default:
+            //message.channel.sendMessage("Такой команды не существует");
     }
 });
