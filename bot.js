@@ -42,8 +42,8 @@ if (roll >= 0 && roll <= 25) {
             message.channel.bulkDelete(list);
             });    
             break;
-                case "!leave":
-  message.channel.send(" ", {files: ["https://pp.userapi.com/c852216/v852216507/8bd1b/stttfRGi5Mc.jpg"]});
+        case "!leave":
+            message.channel.send("1", {files: ["https://pp.userapi.com/c852216/v852216507/8bd1b/stttfRGi5Mc.jpg"]});
             break;
         case "random":
             var roll = Math.floor(Math.random() * 100) + 1;
