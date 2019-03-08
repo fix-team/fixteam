@@ -42,12 +42,6 @@ if (roll >= 0 && roll <= 25) {
             message.channel.bulkDelete(list);
             });    
             break;
-        case "!skip":
-            message.channel.send("", {files: ["https://pp.userapi.com/c851128/v851128285/8d74f/7FFXimd4rvE.jpg"]});
-            break;
-        case "!leave":
-            message.channel.send("", {files: ["https://pp.userapi.com/c852216/v852216507/8bd1b/stttfRGi5Mc.jpg"]});
-            break;
         case "random":
             var roll = Math.floor(Math.random() * 100) + 1;
             message.channel.sendMessage("Ты зарандомил цифру " + roll);
