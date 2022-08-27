@@ -3,6 +3,7 @@ const robot = new Discord.Client();
 const prefix = "";
 robot.login(process.env.BOT_TOKEN);
 robot.on('message', message => {
+  message.channel.sendMessage("Пожилой стервятник");
   if (message.content === '/join') {
     // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voiceChannel) {
