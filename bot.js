@@ -20,7 +20,6 @@ robot.on('message', message => {
 
 robot.on('message', function(message) {
     if (message.author.equals(robot.user)) return;
-    message.channel.sendMessage("Тестовый бот пожилай падоль");
     if (!message.content.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {
