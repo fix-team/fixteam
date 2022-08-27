@@ -3,8 +3,7 @@ const robot = new Discord.Client();
 const prefix = "";
 robot.login(process.env.BOT_TOKEN);
 robot.on('message', message => {
-  if (message.content === 'fta') { ///join вместо fta
-    message.channel.sendMessage("Тестовый бот пожилай падоль");
+  if (message.content === '/join') {
     // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
@@ -20,6 +19,7 @@ robot.on('message', message => {
 
 robot.on('message', function(message) {
     if (message.author.equals(robot.user)) return;
+    message.channel.sendMessage("Тестовый бот пожилай падоль");
     if (!message.content.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {
