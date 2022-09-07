@@ -3,6 +3,10 @@ const robot = new Discord.Client();
 const prefix = "";
 robot.login(process.env.BOT_TOKEN);
 robot.on('message', message => {
+  if(message.content == "worm") {
+      message.reply('Past zatkni syka!');
+      //message.channel.sendMessage("Past zatkni syka!");
+  }
   if (message.content === '/join') {
     // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voiceChannel) {
@@ -20,9 +24,6 @@ robot.on('message', message => {
 robot.on('message', function(message) {
     if (message.author.equals(robot.user)) return;
     message.channel.sendMessage("Past zatkni");
-    if(args[0].toLowerCase() == "worm") {
-      message.channel.sendMessage("Past zatkni syka!");
-    }
     //if (!message.content.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {
