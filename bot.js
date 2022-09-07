@@ -19,7 +19,11 @@ robot.on('message', message => {
 
 robot.on('message', function(message) {
     if (message.author.equals(robot.user)) return;
-    if (!message.content.startsWith(prefix)) return;
+    message.channel.sendMessage("Past zatkni");
+    if(args[0].toLowerCase() == "worm") {
+      message.channel.sendMessage("Past zatkni syka!");
+    }
+    //if (!message.content.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split(" ");
     switch (args[0].toLowerCase()) {
         case "igor":
