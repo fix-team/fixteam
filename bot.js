@@ -4,7 +4,7 @@ const prefix = "";
 robot.login(process.env.BOT_TOKEN);
 robot.on('message', message => {
   if (message.content === '/aljoin') {
-    message.reply('Past zatkni syka!');
+    message.reply('Past zatkni syka! FIRE');
     // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
