@@ -3,11 +3,8 @@ const robot = new Discord.Client();
 const prefix = "";
 robot.login(process.env.BOT_TOKEN);
 robot.on('message', message => {
-  if(message.content == "worm") {
-      message.reply('Past zatkni syka!');
-      //message.channel.sendMessage("Past zatkni syka!");
-  }
-  if (message.content === '/join') {
+  if (message.content === '/aljoin') {
+    message.reply('Past zatkni syka!');
     // Only try to join the sender's voice channel if they are in one themselves
     if (message.member.voiceChannel) {
       message.member.voiceChannel.join()
